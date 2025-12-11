@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Listings - DreamHome</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">DreamHome</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html">Properties</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Listings Page Content -->
+  <div class="listings-page">
+    <div class="container">
+      <h1 class="section-title">Browse All Properties</h1>
+
+      <!-- Filter Section -->
+      <div class="filter-section">
+        <h2 class="filter-title">Filter Properties</h2>
+
+        <div class="filters">
+          <!-- Location Filter -->
+          <div class="filter-group">
+            <label for="location">Location</label>
+            <select id="location">
+              <option value="">All Locations</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Pune">Pune</option>
+              <option value="Noida">Noida</option>
+              <option value="Gurgaon">Gurgaon</option>
+              <option value="Goa">Goa</option>
+            </select>
+          </div>
+
+          <!-- Property Type Filter -->
+          <div class="filter-group">
+            <label for="propertyType">Property Type</label>
+            <select id="propertyType">
+              <option value="">All Types</option>
+              <option value="Apartment">Apartment</option>
+              <option value="Villa">Villa</option>
+              <option value="House">House</option>
+              <option value="Penthouse">Penthouse</option>
+              <option value="Duplex">Duplex</option>
+            </select>
+          </div>
+
+          <!-- Bedrooms Filter -->
+          <div class="filter-group">
+            <label for="bedrooms">Bedrooms</label>
+            <select id="bedrooms">
+              <option value="">Any</option>
+              <option value="1">1 BHK</option>
+              <option value="2">2 BHK</option>
+              <option value="3">3 BHK</option>
+              <option value="4">4 BHK</option>
+              <option value="5">5+ BHK</option>
+            </select>
+          </div>
+
+          <!-- Min Price Filter -->
+          <div class="filter-group">
+            <label for="minPrice">Min Price (₹)</label>
+            <input type="number" id="minPrice" placeholder="e.g., 1000000">
+          </div>
+
+          <!-- Max Price Filter -->
+          <div class="filter-group">
+            <label for="maxPrice">Max Price (₹)</label>
+            <input type="number" id="maxPrice" placeholder="e.g., 10000000">
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="applyFilters">Apply Filters</button>
+      </div>
+
+      <!-- Properties Grid -->
+      <div class="properties-grid" id="propertiesGrid">
+        <!-- Properties will be dynamically loaded here -->
+      </div>
+
+      <!-- No Results Message -->
+      <div class="no-results" id="noResults" style="display: none;">
+        <p>No properties found matching your criteria. Please adjust your filters.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>DreamHome</h3>
+          <p>Your trusted partner in finding the perfect property. We help you discover homes that match your dreams and budget.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="listings.html">Properties</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>Email: info@dreamhome.com</p>
+          <p>Phone: +91 9876543210</p>
+          <p>Address: Mumbai, India</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 DreamHome. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

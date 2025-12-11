@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreamHome - Find Your Perfect Property</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">DreamHome</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html">Properties</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Find Your Dream Home</h1>
+      <p>Discover the best properties in prime locations across India</p>
+      <a href="listings.html" class="btn">Browse Properties</a>
+    </div>
+  </section>
+
+  <!-- Featured Properties Section -->
+  <section class="featured-section">
+    <div class="container">
+      <h2 class="section-title">Featured Properties</h2>
+
+      <div class="featured-grid" id="featuredProperties">
+        <!-- Featured properties will be loaded here via JavaScript -->
+      </div>
+
+      <div class="text-center mt-2">
+        <a href="listings.html" class="btn btn-primary">View All Properties</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>DreamHome</h3>
+          <p>Your trusted partner in finding the perfect property. We help you discover homes that match your dreams and budget.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="listings.html">Properties</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>Email: info@dreamhome.com</p>
+          <p>Phone: +91 9876543210</p>
+          <p>Address: Mumbai, India</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 DreamHome. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="data.js"></script>
+  <script>
+    // Display featured properties on home page (first 3 properties)
+    function displayFeaturedProperties() {
+      const featuredContainer = document.getElementById('featuredProperties');
+      const featuredProps = properties.slice(0, 3);
+
+      featuredContainer.innerHTML = featuredProps.map(property => `
+        <div class="property-card">
+          <img src="${property.image}" alt="${property.title}" class="property-image">
+          <div class="property-info">
+            <h3 class="property-title">${property.title}</h3>
+            <p class="property-location">📍 ${property.location}</p>
+            <div class="property-details">
+              <span>🛏️ ${property.bedrooms} BHK</span>
+              <span>🏠 ${property.type}</span>
+            </div>
+            <p class="property-price">₹${property.price.toLocaleString('en-IN')}</p>
+            <a href="property.html?id=${property.id}" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Load featured properties when page loads
+    document.addEventListener('DOMContentLoaded', displayFeaturedProperties);
+  </script>
+
+</body>
+</html>
