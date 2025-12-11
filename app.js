@@ -1,5 +1,3 @@
-// app.js - Handles the listings page logic and filtering
-
 // Get DOM elements
 const propertiesGrid = document.getElementById('propertiesGrid');
 const noResults = document.getElementById('noResults');
